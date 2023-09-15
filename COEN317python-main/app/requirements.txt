@@ -1,5 +1,0 @@
-flask
-pymysql
-cryptography
-requests
-flask_ngrok
