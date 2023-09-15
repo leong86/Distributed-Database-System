@@ -1,0 +1,74 @@
+version: '3'
+services:
+  db1:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api1:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    depends_on:
+      - db1
+  db2:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api2:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5000
+    depends_on:
+      - db2
+  db3:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api3:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5002:5000
+    depends_on:
+      - db3
+  db4:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api4:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5003:5000
+    depends_on:
+      - db4
+  db5:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api5:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5004:5000
+    depends_on:
+      - db5
+  db6:
+    build:
+      context: ./sql
+      dockerfile: Dockerfile
+  api6:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports:
+      - 5005:5000
+    depends_on:
+      - db6
